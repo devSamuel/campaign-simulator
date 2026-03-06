@@ -2,6 +2,10 @@
 
 A full-stack marketing campaign automation platform built with Domain-Driven Design (DDD). It lets you create campaigns, attach creatives and audience segments, define performance rules, and run simulations that stream results in real time.
 
+<img width="912" height="766" alt="Screenshot 2026-03-06 at 2 12 22 a m" src="https://github.com/user-attachments/assets/1e0b13cb-2f1c-4cc0-a8b3-bcd0946994ce" />
+<img width="996" height="800" alt="Screenshot 2026-03-06 at 2 12 15 a m" src="https://github.com/user-attachments/assets/905eb6ce-882e-4aa0-9d65-9965523b77e7" />
+
+
 ## Tech Stack
 
 ### Backend
