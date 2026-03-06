@@ -110,32 +110,13 @@ git clone <repo-url>
 cd marketing_automation
 ```
 
-### 2. Configure environment
+### 2. Bootstrap
 
 ```bash
-cp .env.example .env
+make setup
 ```
 
-The defaults in `.env.example` match the Docker Compose service definitions and work out of the box.
-
-### 3. Start all services
-
-```bash
-make up
-```
-
-This builds and starts:
-- PostgreSQL, RabbitMQ, Redis
-- FastAPI app (`http://localhost:8000`)
-- Celery worker
-- Nginx reverse proxy (`http://localhost:80`)
-- Next.js frontend (`http://localhost:3000`)
-
-### 4. Run database migrations
-
-```bash
-make migrate
-```
+This single command copies `.env.example` → `.env`, builds and starts all services (PostgreSQL, RabbitMQ, Redis, FastAPI, Celery worker, Nginx, Next.js), and runs database migrations.
 
 The platform is now running. Open `http://localhost:3000` in your browser.
 
@@ -144,6 +125,7 @@ The platform is now running. Open `http://localhost:3000` in your browser.
 ## Available Commands
 
 ```bash
+make setup            # First-time setup: copy .env, start services, run migrations
 make up               # Build and start all services (detached)
 make down             # Stop and remove all containers + volumes
 make build            # Build images without starting

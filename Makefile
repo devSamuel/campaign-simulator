@@ -1,4 +1,9 @@
-.PHONY: up down build migrate test lint
+.PHONY: setup up down build migrate test lint
+
+setup:
+	cp -n .env.example .env || true
+	docker compose up --build -d
+	docker compose run --rm api alembic upgrade head
 
 up:
 	docker compose up --build -d
