@@ -107,7 +107,7 @@ DRAFT --> SIMULATING --> ACTIVE
 
 ```bash
 git clone <repo-url>
-cd marketing_automation
+cd campaign-simulator
 ```
 
 ### 2. Bootstrap
